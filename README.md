@@ -178,8 +178,8 @@ Before we push the code up, let's set the config vars (or we'll see errors!)
 You can remind yourself what environment variables we need by looking at your `heroku.py` file, but to get this project ready to run, you can use the CLI `heroku config` command.
 
 ```
-heroku config ALLOWED_HOSTS=your-app-name.com
-heroku config DJANGO_SETTINGS_MODULE=dynowiki.settings.heroku
+heroku config:set ALLOWED_HOSTS=your-app-name.herokuapp.com
+heroku config:set DJANGO_SETTINGS_MODULE=dynowiki.settings.heroku
 ```
 For the SECRET_KEY, you'll need to generate a new secret. For this demo, it doesn't matter what it is - it's great to use a secure hash generator, or a password manager's generator. Just be sure to keep this value secure, don't reuse it, and NEVER check it into source code!
 
